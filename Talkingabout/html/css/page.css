@@ -90,12 +90,13 @@ body {
 /* 메인 스타일 */
 /* 피드 */
 .feed {
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: center;
     display: inline-block;
     justify-content: center;
-
     height: 100vh;
+    padding: 5px;
+    background-color: #ffffff;
 }
 
 .post {
@@ -199,22 +200,50 @@ body {
 }
 
 /* 검색 */
-.search input {
-    width: 100%;
-    border: 1px solid #bbb;
-    border-radius: 8px;
-    padding: 10px 12px;
-    font-size: 14px;
-
-}
-
-.search {
+.search-box {
+    height: 30px;
+    width: 300px;
+    background: #ffffff;
+    border-radius: 40px;
+    padding: 10px;
+    border: 1px solid #000000;
     position: relative;
     width: 90%;
 }
 
-.search img {
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0px;
+    color: #555;
+    font-size: 16px;
+    width: 200px;
+}
+
+.search-btn {
+    color: #fff;
+    float: right;
+    width: 40px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.search-box input {
+    width: 100%;
+    font-size: 14px;
+}
+
+
+.search-box img {
     position: absolute;
-    width: 10%;
+    width: 40px;
 
 }
