@@ -169,9 +169,10 @@ body {
 /* 사이드바 */
 .sidebar {
     height: 100vh;
-    background-color: #f4f4f4;
+    padding: 5px;
+    background-color: #ffffff;
     justify-content: left;
-    margin: 10;
+    margin: 10px;
 }
 
 .sidebar h2 {
@@ -197,23 +198,23 @@ body {
     color: #555;
 }
 
-
+/* 검색 */
 .search input {
     width: 100%;
     border: 1px solid #bbb;
     border-radius: 8px;
     padding: 10px 12px;
     font-size: 14px;
+
 }
 
 .search {
     position: relative;
-    width: 300px;
+    width: 90%;
 }
 
 .search img {
     position: absolute;
-    width: 20px;
-    top: 20px;
-    margin: auto;
+    width: 10%;
+
 }
