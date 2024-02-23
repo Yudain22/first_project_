@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/page.css">
+    <title>Talking about</title>
+</head>
+
+<body>
+    <!-- 페이지 전체를 묶은 컨테이너 -->
+    <div id="full_container">
+        <!-- 헤드부분(로고, 사용자 프로필) -->
+        <div id="header_container">
+            <!-- 로고 -->
+            <div class="mainLogo">
+                <img src="logo.png" alt="Talking about 로고">
+            </div>
+            <!-- 사용사 프로필 -->
+            <div class="user-profile">
+                <img src="profile.png" alt="Profile Picture">
+            </div>
+        </div>
+        <!-- 컨텐츠 부분(카테고리바, 피드, 채팅 사이드바) -->
+        <div id="contant_container">
+            <!-- 카테고리바 -->
+            <div class="sidebar">
+                <!-- 검색창 -->
+                <div class="search">
+                    <input type="text" placeholder="검색어 입력">
+                    <img src="search.png">
+                </div>
+                <!-- 카테고리 -->
+                <h2>AI의 Talk 추천!</h2>
+                <ul>
+                    <li><a href="#">운동</a></li>
+                    <li><a href="#">요리</a></li>
+                    <li>
+                        <a href="#">그림</a>
+                        <ul>
+                            <li><a href="#">수채화</a></li>
+                            <li><a href="#">유화</a></li>
+                            <li><a href="#">오일파스텔</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- 피드 -->
+            <div class="feed">
+                <div class="post" id="post1">
+                    <div class="post-header">
+                        <img src="profile.png" alt="Profile Picture">
+                        <div class="username">username_2</div>
+                    </div>
+                    <img src="post_image_1.jpg" alt="Post Image" class="post-image">
+                    <div class="post-actions">
+                        <button onclick="toggleLike('post1')">좋아요</button>
+                        <button onclick="toggleComment('post1')">댓글</button>
+                    </div>
+                    <div class="likes">0 좋아요</div>
+                    <div class="comments" style="display:none;">
+                        <input type="text" placeholder="댓글 달기...">
+                        <button onclick="submitComment('post1')">등록</button>
+                        <ul>
+                            <!-- 댓글 표시될 곳 -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 추가적인 게시물들 -->
+        <footer>
+            <div id="footer_container">
+
+            </div>
+
+        </footer>
+    </div>
+
+    <script>
+        // 좋아요 토글 함수
+        function toggleLike(postId) {
+            var post = document.getElementById(postId);
+            var likesElement = post.querySelector('.likes');
+            var currentLikes = parseInt(likesElement.innerText);
+            var liked = post.classList.toggle('liked');
+            if (liked) {
+                likesElement.innerText = currentLikes + 1 + ' 좋아요';
+            } else {
+                likesElement.innerText = currentLikes - 1 + ' 좋아요';
+            }
+        }
+
+        // 댓글 보이기/숨기기 함수
+        function toggleComment(postId) {
+            var post = document.getElementById(postId);
+            var commentsElement = post.querySelector('.comments');
+            commentsElement.style.display = commentsElement.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // 댓글 등록 함수
+        function submitComment(postId) {
+            var post = document.getElementById(postId);
+            var commentsList = post.querySelector('.comments ul');
+            var commentInput = post.querySelector('.comments input');
+            var newComment = document.createElement('li');
+            newComment.textContent = commentInput.value;
+            commentsList.appendChild(newComment);
+            commentInput.value = ''; // 입력 필드 초기화
+        }
+
+    </script>
+</body>
+
+</html>
