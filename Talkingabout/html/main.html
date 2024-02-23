@@ -38,47 +38,71 @@
                 <h2>AI의 Talk 추천!</h2>
                 <ul>
                     <li><a href="#">운동</a></li>
-                    <li><a href="#">요리</a></li>
+                    <li><a href="#">그림</a></li>
                     <li>
-                        <a href="#">그림</a>
+                        <a href="#">요리</a>
                         <ul>
-                            <li><a href="#">수채화</a></li>
-                            <li><a href="#">유화</a></li>
-                            <li><a href="#">오일파스텔</a></li>
+                            <li><a href="#">한식</a></li>
+                            <li><a href="#">양식</a></li>
+                            <li><a href="#">일식</a></li>
+                            <li><a href="#">중식</a></li>
+                            <li><a href="#">비건식</a></li>
+                            <li><a href="#">다이어트 식단</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
             <!-- 피드 -->
             <div class="feed">
-                <div class="post" id="post1">
+                <!-- 게시물 -->
+                <div class="post" id="post1" overflow-y:scroll;>
+                    <!-- 게시물 프로필 -->
                     <div class="post-header">
                         <img src="profile.png" alt="Profile Picture">
-                        <div class="username">username_2</div>
+                        <div class="username">ilike</div>
                     </div>
-                    <img src="post_image_1.jpg" alt="Post Image" class="post-image">
+                    <!-- 게시물 사진 -->
+                    <img src="kook.jpg" alt="Post Image" class="post-image">
+                    <!-- 게시물 버튼(좋아요, 댓글) -->
                     <div class="post-actions">
-                        <button onclick="toggleLike('post1')">좋아요</button>
-                        <button onclick="toggleComment('post1')">댓글</button>
+                        <!-- 좋아요 -->
+                        <div class="likes"></div>
+                        <button class="like-btn" type="submit">
+                            <img src="bin-heart.png" onclick="oggleLike('post1')">
+                        </button>
+                        <!-- 댓글 -->
+                        <button class="comment-btn">
+                            <img src="comment.png" onclick="toggleComment('post1')">댓글</button>
                     </div>
-                    <div class="likes">0 좋아요</div>
                     <div class="comments" style="display:none;">
                         <input type="text" placeholder="댓글 달기...">
-                        <button onclick="submitComment('post1')">등록</button>
+                        <button class="submit-btn" onclick="submitComment('post1')">등록</button>
                         <ul>
                             <!-- 댓글 표시될 곳 -->
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- 추가적인 게시물들 -->
-        <footer>
-            <div id="footer_container">
-
+            <!-- 오른쪽 사이드 -->
+            <div class="leftSidebar">
+                <div class="chat">
+                    <h2>Chat</h2>
+                    <p>This is the chat section.</p>
+                </div>
+                <div class="notification">
+                    <h2>Notifications</h2>
+                    <p>This is the notification section.</p>
+                </div>
             </div>
+        </div>
+    </div>
+    <!-- 추가적인 게시물들 -->
+    <footer>
+        <div id="footer_container">
 
-        </footer>
+        </div>
+
+    </footer>
     </div>
 
     <script>

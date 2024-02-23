@@ -101,7 +101,6 @@ body {
 
 .post {
     background-color: #ffffff;
-    border: 1px solid #dbdbdb;
     margin-bottom: 20px;
 }
 
@@ -123,8 +122,48 @@ body {
 }
 
 .post-image {
-    max-width: 100%;
+    max-width: 95%;
 }
+
+.like-btn {
+    color: #fff;
+    float: left;
+    width: 40px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+
+}
+
+.comment-btn {
+    color: #fff;
+    /* float: left; */
+    width: 40px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+
+}
+
+.like-btn img {
+    width: 30px;
+}
+
+.comment-btn img {
+    width: 30px;
+}
+
+
 
 /* 헤더 */
 #full_container {
@@ -246,4 +285,32 @@ body {
     position: absolute;
     width: 40px;
 
+}
+
+
+
+/* 오른쪽 사이드 */
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.leftSidebar {
+    height: 100vh;
+    background-color: #ffffff;
+    justify-content: left;
+    margin: 10px;
+}
+
+
+.content {
+    padding: 20px;
+}
+
+.chat,
+.notification {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
 }
