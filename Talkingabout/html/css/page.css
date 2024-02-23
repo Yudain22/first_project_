@@ -94,13 +94,8 @@ body {
     text-align: center;
     display: inline-block;
     justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 
-    width: 500px;
-    height: 600px;
+    height: 100vh;
 }
 
 .post {
@@ -132,7 +127,6 @@ body {
 
 /* 헤더 */
 #full_container {
-    display: ;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
@@ -147,6 +141,13 @@ body {
     width: auto;
     flex-wrap: nowrap;
 }
+
+#contant_container {
+    display: grid;
+    grid-template-columns: 400px 700px 500px;
+    /* 사이드바, 피드, 채팅바 조절 그리드 */
+}
+
 
 .mainLogo img {
     height: 70px;
@@ -167,10 +168,10 @@ body {
 
 /* 사이드바 */
 .sidebar {
-    width: 400px;
+    height: 100vh;
     background-color: #f4f4f4;
-    padding: 20px;
     justify-content: left;
+    margin: 10;
 }
 
 .sidebar h2 {
@@ -196,10 +197,6 @@ body {
     color: #555;
 }
 
-/* #contant_container {
-
-} */
-
 
 .search input {
     width: 100%;
@@ -216,8 +213,7 @@ body {
 
 .search img {
     position: absolute;
-
     width: 20px;
     top: 20px;
-    margin: 0;
+    margin: auto;
 }
