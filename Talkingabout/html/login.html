@@ -15,10 +15,10 @@
         </div>
         <form id="loginForm" action="#" method="POST">
             <div class="form-group">
-                <input type="text" id="userId" name="userId" placeholder="이메일이나 아이디를 입력하세요" required>
+                <input type="text" id="userLoginId" placeholder="아이디를 입력하세요" required>
             </div>
             <div class="form-group">
-                <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요" required>
+                <input type="password" id="userLogPassword" placeholder="비밀번호를 입력하세요" required>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn-login">로그인</button>
@@ -29,6 +29,10 @@
 
         </form>
     </div>
+    <script>
+        if ("#userid" != "#userLoginId") { alert("회원가입이 되어있지 않거나 잘못된 아이디입니다") }
+        if ("#userpassword" != "#userLogPassword") { alert("잘못된 비밀번호 입니다") }
+    </script>
 
 </body>
 

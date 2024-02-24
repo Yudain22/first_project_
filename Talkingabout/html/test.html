@@ -1,112 +1,70 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talking abaut|login</title>
+    <title>Instagram Friends List</title>
     <style>
-        html,
-body {
-    padding: 0;
-    margin: 0;
-    background-color: rgb(217, 227, 216);
-}
-
-.login-container,
-.signup-container {
-    width: 400px;
-    height: 550px;
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin: auto;
-    margin-top: 70px;
-
-}
-
-.logo {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.logo img {
-    width: 220px;
-    margin-top: 20px;
-    margin-bottom: 25px;
-
-
-}
-
-#loginForm {
-    margin: auto;
-    text-align: center;
-
-}
-
-.form-group {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.form-group input {
-    margin: auto 0%;
-    width: 90%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    text-align: center;
-    margin-top: 2px;
-    font-size: 16px;
-}
-
-.btn-login,
-.btn-signup,
-.btn-check {
-    width: 90%;
-    padding: 10px;
-    background-color: rgb(109, 195, 119);
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-
-}
-
-.btn-login:hover,
-.btn-signup:hover,
-.btn-check:hover {
-    background-color: #165d35;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .friend {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .friend img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .friend .username {
+            font-weight: bold;
+        }
     </style>
 </head>
-
 <body>
-    <div class="login-container">
-        <div class="logo">
-            <img src="logo.png" alt="Talking about 로고">
+    <div class="container">
+        <div class="friend">
+            <img src="profile1.jpg" alt="Friend 1">
+            <span class="username">friend1_username</span>
         </div>
-        <form id="loginForm" action="#" method="POST">
-            <div class="form-group">
-                <input type="text" id="userId" name="userId" placeholder="이메일이나 아이디를 입력하세요" required>
-            </div>
-            <div class="form-group">
-                <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요" required>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn-login">로그인</button>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn-signup" onclick="location.href='signup.html'"> 회원가입 </button>
-            </div>
-
-        </form>
+        <div class="friend">
+            <img src="profile2.jpg" alt="Friend 2">
+            <span class="username">friend2_username</span>
+        </div>
+        <div class="friend">
+            <img src="profile3.jpg" alt="Friend 3">
+            <span class="username">friend3_username</span>
+        </div>
+        <div class="friend">
+            <img src="profile4.jpg" alt="Friend 4">
+            <span class="username">friend4_username</span>
+        </div>
+        <div class="friend">
+            <img src="profile5.jpg" alt="Friend 5">
+            <span class="username">friend5_username</span>
+        </div>
+        <div class="friend">
+            <img src="profile6.jpg" alt="Friend 6">
+            <span class="username">friend6_username</span>
+        </div>
+        <div class="friend">
+            <img src="profile7.jpg" alt="Friend 7">
+            <span class="username">friend7_username</span>
+        </div>
     </div>
-
 </body>
-
 </html>
