@@ -340,3 +340,15 @@ body {
 .friend .username {
     font-weight: bold;
 }
+
+footer {
+    height: 90px;
+    bottom: 0px;
+    border-top: 1px solid #fff;
+    padding-top: 15px;
+    color: #ccc;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+
+}

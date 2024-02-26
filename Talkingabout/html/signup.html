@@ -31,67 +31,43 @@
                 <input type="password" id="checkPassword" placeholder="비밀번호 확인" required>
             </div>
             <div>
-                <button type="button" id="btn-check" onclick=" location.href = 'main.html'">확인</button>
+                <button type="button" id="btn-check">확인</button>
             </div>
         </form>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        // $(document).ready(function () {
-        //     $("#btn-check").click(function () {
-        //         if ($("#userEmail").val().length == 0) {
-        //             alet("이메일을 입력하세요.");
-        //             $(#userEmail).focus(); return false;
-        //         }
-        //         if ($("#userId").val().length == 0) {
-        //             alet("아이디를 입력하세요.");
-        //             $(#userId).focus(); return false;
-        //         }
-        //         if ($("#userTel").val().length == 0) {
-        //             alet("전화번호를 입력하세요.");
-        //             $(#userTel).focus(); return false;
-        //         }
-        //         if ($("#userPassword").val().length == 0) {
-        //             alet("비밀번호를 입력하세요.");
-        //             $(#userPassword).focus(); return false;
-        //         }
-        //         if ($("#checkPassword").val().length == 0) {
-        //             alet("확인용 비밀번호 입력하세요.");
-        //             $(#checkPassword).focus(); return false;
-        //         }
-        //         if ("#userPassword" != "#checkPassword") {
-        //             alet("비밀번호와 확인용 비밀번호를 확인해주세요.")
-        //         }
-        //     });
-        // });
-        function checkBtnSubmit() {
-            // 확인 버튼을 클릭했을 때 실행되는 함수
-            // main.html로 이동
-            if ($("#userEmail").val().length == 0) {
-                alet("이메일을 입력하세요.");
-                $(#userEmail).focus(); return false;
-            }
-            if ($("#userId").val().length == 0) {
-                alet("아이디를 입력하세요.");
-                $(#userId).focus(); return false;
-            }
-            if ($("#userTel").val().length == 0) {
-                alet("전화번호를 입력하세요.");
-                $(#userTel).focus(); return false;
-            }
-            if ($("#userPassword").val().length == 0) {
-                alet("비밀번호를 입력하세요.");
-                $(#userPassword).focus(); return false;
-            }
-            if ($("#checkPassword").val().length == 0) {
-                alet("확인용 비밀번호 입력하세요.");
-                $(#checkPassword).focus(); return false;
-            }
-            if ("#userPassword" != "#checkPassword") {
-                alet("비밀번호와 확인용 비밀번호를 확인해주세요.")
-            }
-            else ("#userEmail", "#userTel", "#userPassword", "#checkPassword" != null)(window.location.href = "main.html")
-        }
+        $(document).ready(function () {
+            $("#btn-check").click(function () {
+                if ($("#userEmail").val().length == 0) {
+                    alert("이메일을 입력하세요.");
+                    $("#userEmail").focus(); return false;
+                }
+                if ($("#userId").val().length == 0) {
+                    alert("아이디를 입력하세요.");
+                    $("#userId").focus(); return false;
+                }
+                if ($("#userTel").val().length == 0) {
+                    alert("전화번호를 입력하세요.");
+                    $("#userTel").focus(); return false;
+                }
+                if ($("#userPassword").val().length == 0) {
+                    alert("비밀번호를 입력하세요.");
+                    $("#userPassword").focus(); return false;
+                }
+                if ($("#checkPassword").val().length == 0) {
+                    alert("확인용 비밀번호를 입력하세요.");
+                    $("#checkPassword").focus(); return false;
+                }
+                if ($("#userPassword").val() != $("#checkPassword").val()) {
+                    alert("비밀번호와 확인용 비밀번호가 일치하지 않습니다.");
+                    return false;
+                }
+                // 입력이 모두 완료되면 main.html로 이동
+                window.location.href = "main.html";
+            });
+        });
     </script>
 </body>
 

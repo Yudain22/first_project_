@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Talking abaut|login</title>
     <link rel="stylesheet" href="css/page.css">
+    <!-- jQuery 라이브러리 추가 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -21,7 +23,7 @@
                 <input type="password" id="userLogPassword" placeholder="비밀번호를 입력하세요" required>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn-login">로그인</button>
+                <button type="button" class="btn-login">로그인</button>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn-signup" onclick="location.href='signup.html'"> 회원가입 </button>
@@ -30,8 +32,20 @@
         </form>
     </div>
     <script>
-        if ("#userid" != "#userLoginId") { alert("회원가입이 되어있지 않거나 잘못된 아이디입니다") }
-        if ("#userpassword" != "#userLogPassword") { alert("잘못된 비밀번호 입니다") }
+        $(document).ready(function () {
+            $(".btn-login").click(function () {
+                if ($("#userLoginId").val().length == 0) {
+                    alert("아이디를 입력하세요.");
+                    $("#userLoginId").focus(); return false;
+                }
+                if ($("#userLogPassword").val().length == 0) {
+                    alert("비밀번호를 입력하세요.");
+                    $("#userLogPassword").focus(); return false;
+                }
+                // 로그인 버튼 클릭 시 작동할 코드
+                window.location.href = "main.html";
+            });
+        });
     </script>
 
 </body>
